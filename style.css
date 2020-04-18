@@ -418,19 +418,25 @@ body {
 }
 
 .skills-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 2%;
   list-style-type: none;
+  width: 80%;
 }
 
 .skills-list__item {
+  margin-right: 2vw;
   font-size: 1.4vw;
   line-height: 3vw;
   font-family: "Lato", Arial, sans-serif;
   color: black;
-}
-
-.skills-list__item span {
-  margin-right: 0.5vw;
 }
 
 @media screen and (max-width: 500px) {
@@ -722,6 +728,7 @@ body {
 }
 
 .project-new_item__list-group {
+  margin-top: 4vw;
   font-family: "FuturaBookC";
   font-size: 1.7vw;
   padding: 1vw;
@@ -729,7 +736,6 @@ body {
   border-radius: 1vw;
   background-color: rgba(27, 101, 166, 0.678);
   color: white;
-  opacity: 0;
   -webkit-transition: 700ms ease-out;
   transition: 700ms ease-out;
 }
@@ -737,7 +743,7 @@ body {
 @media screen and (max-width: 500px) {
   .project-new_item__list-group {
     font-size: 3.4vw;
-    margin-top: 5vw;
+    margin-top: 7vw;
     padding: 2vw;
     border-radius: 2vw;
   }
@@ -764,12 +770,6 @@ body {
   opacity: 1;
   -webkit-transform: translateY(-4vw);
           transform: translateY(-4vw);
-}
-
-.project-new_item:hover .project-new_item__list-group {
-  opacity: 1;
-  -webkit-transform: translateY(2.5vw);
-          transform: translateY(2.5vw);
 }
 
 .link-to-github, .link-to-deploy {

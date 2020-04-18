@@ -303,16 +303,18 @@ body {
   }
 }
 .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 2%;
   list-style-type: none;
+  width: 80%;
   &__item {
+    margin-right: 2vw;
     font-size: 1.4vw;
     line-height: 3vw;
     font-family: $Lato;
     color: black;
-    span {
-      margin-right: 0.5vw;
-    }
     @media screen and (max-width: $mobile) {
       font-size: 3vw;
       line-height: 6vw;
@@ -512,6 +514,7 @@ body {
       }
     }
     &__list-group {
+      margin-top: 4vw;
       font-family: "FuturaBookC";
       font-size: 1.7vw;
       padding: 1vw;
@@ -519,11 +522,10 @@ body {
       border-radius: 1vw;
       background-color: rgba(27, 101, 166, 0.678);
       color: white;
-      opacity: 0;
       transition: 700ms ease-out;
       @media screen and (max-width: $mobile) {
         font-size: 3.4vw;
-        margin-top: 5vw;
+        margin-top: 7vw;
         padding: 2vw;
         border-radius: 2vw;
       }
@@ -543,11 +545,6 @@ body {
 {
   opacity: 1;
   transform: translateY(-4vw);
-}
-
-.project-new_item:hover .project-new_item__list-group {
-  opacity: 1;
-  transform: translateY(2.5vw);
 }
 
 .link-to-github, .link-to-deploy {
