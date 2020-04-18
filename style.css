@@ -815,7 +815,7 @@ body {
 }
 
 .fancy-weather {
-  background: url("./src/assets/images/fancy-weather.jpg") no-repeat center top/cover;
+  background: url("./src/assets/images/weather.jpg") no-repeat center top/cover;
 }
 
 .simple-piskel-clone {
@@ -823,7 +823,7 @@ body {
 }
 
 .todo {
-  background: url("./src/assets/images/todo.jpg") no-repeat center top/cover;
+  background: url("./src/assets/images/todolist.jpg") no-repeat center top/cover;
 }
 
 .culture-portal {
@@ -831,7 +831,7 @@ body {
 }
 
 .songbird {
-  background: url("./src/assets/images/songbird.jpg") no-repeat center top/cover;
+  background: url("./src/assets/images/song.jpg") no-repeat center top/cover;
 }
 
 .repair-design-project::before {
