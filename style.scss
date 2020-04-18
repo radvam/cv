@@ -1,0 +1,656 @@
+$Lato: "Lato", Arial, sans-serif;
+$mobile: 500px;
+$tablet: 768px;
+
+@font-face {
+  font-family: "FuturaBookC";
+  src: url("./src/assets/fonts/FuturaBookC.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 20vw;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: $mobile) {
+    height: 40vw;
+  }
+}
+
+body {
+  background: url('./src/assets/images/tree.jpg') center center / cover no-repeat fixed;
+}
+
+.main-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.person-image {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  @media screen and (max-width: $mobile) {
+    width: 28vw;
+    height: 30vw;
+  }
+}
+.personal-information {
+  margin-left: 3vw;
+  @media screen and (max-width: $mobile) {
+    margin-left: 1vw;
+  }
+}
+.person-name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.6vw;
+  line-height: 4vw;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: "FuturaBookC";
+  color: #043846;
+  @media screen and (max-width: $mobile) {
+    font-size: 5.6vw;
+    line-height: 8vw;
+    padding-top: 4%;
+  }
+}
+.social-links__header {
+  padding-top: 4%;
+  display: flex;
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+    padding-top: 1%;
+    padding-left: 10%;
+  }
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  margin-right: 2vw;
+  list-style: none;
+  font-size: 1.4vw;
+  line-height: 3vw;
+  font-family: "FuturaBookC";
+  font-weight: 500;
+  padding-bottom: 5px;
+  @media screen and (max-width: $mobile) {
+    font-size: 3.8vw;
+    line-height: 6vw;
+  }
+  .social-links__img {
+    margin-right: 5%;
+    width: 3vw !important;
+    height: 3vw !important;
+    border-radius: 50%;
+    flex-shrink: 0;
+    @media screen and (max-width: $mobile) {
+      width: 5vw !important;
+      height: 5vw !important;
+    }
+  }
+}
+.header__href {
+  text-decoration: none;
+  color: #000000;
+  &:hover {
+    color: #ec9f05;
+  }
+}
+
+.education {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 3vw;
+  margin-bottom: 2vw;
+}
+
+.collapsible {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  height: 5vw;
+  margin: 0 auto;
+  border-radius: 3vw;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: rgba(0, 0, 0, 0.034);
+  cursor: pointer;
+  outline: none;
+  transition: 1s ease;
+
+  background: rgba(211, 64, 27, 0.801);
+  box-shadow: 0.3vw 0.3vw #989898, 0.6vw 0.6vw #6c6666;
+  &:active {
+    box-shadow: 1px 1px #989898;
+  }
+  @media screen and (max-width: $mobile) {
+    width: 80vw;
+    box-shadow: 0.6vw 0.6vw #414141, 1.2vw 1.2vw #6c6666;
+    border-radius: 5vw;
+    height: 8.5vw;
+  }
+}
+
+.collapsible__education-text {
+  margin-left: 6.8%;
+  font-size: 2vw;
+  line-height: 2vw;
+  font-family: $Lato;
+  color: #043846;
+  color: white;
+  @media screen and (max-width: $mobile) {
+    font-size: 4vw;
+    line-height: 6vw;
+  }
+}
+.collapsible__education-img,
+.collapsible__summary-img,
+.collapsible__skills-img,
+.collapsible__english-img {
+  width: 2.8vw;
+  margin-right: 4vw;
+  transform: rotate(180deg);
+  transition: 0.8s ease;
+  @media screen and (max-width: $mobile) {
+    width: 5vw;
+    margin-right: 6vw;
+  }
+}
+.active-button {
+  transform: rotate(360deg);
+}
+.education-list {
+  width: 80%;
+  margin-top: 2%;
+  @media screen and (max-width: $mobile) {
+    width: 80%;
+  }
+  &__item {
+    font-size: 1.4vw;
+    line-height: 3.5vw;
+    font-family: $Lato;
+    color: black;
+    @media screen and (max-width: $mobile) {
+      font-size: 3vw;
+      line-height: 6vw;
+    }
+  }
+}
+
+.education-list__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education-item_years {
+  width: 50%;
+  font-style: italic;
+  color: black;
+  span {
+    font-style: normal;
+    margin-right: 0.5vw;
+  }
+}
+
+.education-item__info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.education-item__title {
+  font-weight: bold;
+}
+
+.education-item__desc {
+  padding-left: 1vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.education-item__desc-link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  text-decoration: none;
+  background-image: linear-gradient(rgba(179, 26, 6, 0.801), rgba(179, 26, 6, 0.801)), linear-gradient(silver 50%, silver 50%); 
+  background-position: center bottom; 
+  background-repeat: no-repeat; 
+  background-size: 0 2px, 100% 2px; 
+  color: rgb(0, 204, 255); 
+  padding-bottom: 0.4vw; 
+  transition: .5s ease-in-out;
+  @media screen and (max-width: $mobile) {
+    font-size: 3vw;
+  }
+}
+
+.education-item__desc-link:hover {
+  background-size: 100% 2px, 100% 2px;
+  color: rgba(179, 26, 6, 0.801);
+}
+
+.content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  display: flex;
+  justify-content: center;
+}
+
+.summary {
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 2vw;
+}
+.collapsible__summary-text {
+  margin-left: 6.8%;
+  font-size: 2vw;
+  line-height: 2vw;
+  font-family: $Lato;
+  color: #043846;
+  color: white;
+  @media screen and (max-width: $mobile) {
+    font-size: 4vw;
+    line-height: 6vw;
+  }
+}
+.summary-list {
+  margin-top: 2%;
+  list-style-type: none;
+  &__item {
+    font-size: 1.4vw;
+    line-height: 3vw;
+    font-family: $Lato;
+    color: black;
+    span {
+      margin-right: 0.5vw;
+    }
+    @media screen and (max-width: $mobile) {
+      font-size: 3vw;
+      line-height: 6vw;
+    }
+  }
+}
+
+.skills {
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 2vw;
+}
+.collapsible__skills-text {
+  margin-left: 6.8%;
+  font-size: 2vw;
+  line-height: 2vw;
+  font-family: $Lato;
+  color: white;
+  @media screen and (max-width: $mobile) {
+    font-size: 4vw;
+    line-height: 6vw;
+  }
+}
+.skills-list {
+  margin-top: 2%;
+  list-style-type: none;
+  &__item {
+    font-size: 1.4vw;
+    line-height: 3vw;
+    font-family: $Lato;
+    color: black;
+    span {
+      margin-right: 0.5vw;
+    }
+    @media screen and (max-width: $mobile) {
+      font-size: 3vw;
+      line-height: 6vw;
+    }
+  }
+}
+
+.english {
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 2vw;
+}
+.collapsible__english-text {
+  margin-left: 6.8%;
+  font-size: 2vw;
+  line-height: 2vw;
+  font-family: $Lato;
+  color: white;
+  @media screen and (max-width: $mobile) {
+    font-size: 4vw;
+    line-height: 6vw;
+  }
+}
+.english-info {
+  margin-top: 2%;
+  font-size: 1.4vw;
+  line-height: 3.5vw;
+  font-family: $Lato;
+  color: black;
+  span {
+    margin-right: 0.5vw;
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: 3vw;
+    line-height: 6vw;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 7vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #edeef0;
+  @media screen and (max-width: $mobile) {
+    height: 9vw;
+  }
+}
+.social-links__footer {
+  padding-bottom: 1%;
+  display: flex;
+  @media screen and (max-width: $mobile) {
+    padding-top: 1%;
+  }
+}
+.footer__list {
+  display: flex;
+  align-items: center;
+  margin-right: 2vw;
+  list-style: none;
+  font-size: 1.4vw;
+  line-height: 3vw;
+  font-family: "FuturaBookC";
+  font-weight: 500;
+  padding-bottom: 5px;
+  @media screen and (max-width: $mobile) {
+    font-size: 3.8vw;
+    line-height: 6vw;
+  }
+  .social-links__img {
+    margin-right: 5%;
+    width: 3vw !important;
+    height: 3vw !important;
+    border-radius: 50%;
+    flex-shrink: 0;
+    @media screen and (max-width: $mobile) {
+      width: 5vw !important;
+      height: 5vw !important;
+    }
+  }
+}
+
+.footer {
+  background-color: black;
+  height: 15vw;
+  @media screen and (max-width: $mobile) {
+    height: 30vw;
+  }
+}
+.footer__href {
+  text-decoration: none;
+  color: #000000;
+  &:hover {
+    color: #ec9f05;
+  }
+}
+
+
+.contacts {
+  margin: 0 auto;
+  width: 60vw;
+  text-decoration: none;
+  color: #000000;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #145c70;
+  padding-bottom: 2vw;
+  font-size: 1.4vw;
+  font-weight: bold;
+  @media screen and (max-width: $mobile) {
+    align-items: center;
+    width: 90vw;
+    font-size: 3vw;
+    line-height: 4vw;
+    padding-bottom: 3vw;
+  }
+}
+
+.author {
+  margin: 1vw;
+}
+
+.contacts__link {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.7vw;
+  color: rgb(0, 204, 255);
+  @media screen and (max-width: $mobile) {
+    font-size: 3.2vw;
+  }
+}
+.contacts__item {
+  padding: 0 2vw 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__label {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.8vw;
+  color: white;
+  margin-bottom: 0.8vw;
+  @media screen and (max-width: $mobile) {
+    font-size: 3.2vw;
+    margin-bottom: 1.2vw;
+  }
+}
+
+
+.project-new {
+  margin: 0 auto;
+  padding-top: 8vw;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  @media screen and (max-width: $mobile) {
+    padding-top: 14vw;
+  }
+  &_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 42vw;
+    height: 30vw;
+    border-radius: 2.5vw;
+    margin-bottom: 6vw;
+    transition: 1s ease;
+    box-shadow: 1vw 1vw 2vw #0003;
+    position: relative;
+    background: rgb(100,100,100) radial-gradient(circle at 50% 0, rgba(255,255,255,.65), rgba(255,255,255,.35));
+    box-shadow:
+      inset rgba(0,0,0,.6) 0 -3px 8px,
+      inset rgba(252,255,255,.7) 0 3px 8px,
+    rgba(0,0,0,.8) 0 3px 8px -3px;
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 12vw;
+      border-radius: 5vw;
+      width: 80vw;
+      height: 60vw;
+    }
+    &::before {
+      font-family: "FuturaBookC";
+      content: 'default';
+      color: #043867;
+      font-size: 3vw;
+      position: absolute;
+      top: -4.2vw;
+      @media screen and (max-width: $mobile) {
+        font-size: 5vw;
+        top: -7.5vw;
+      }
+    }
+    &__list-group {
+      font-family: "FuturaBookC";
+      font-size: 1.7vw;
+      padding: 1vw;
+      list-style: none;
+      border-radius: 1vw;
+      background-color: rgba(27, 101, 166, 0.678);
+      color: white;
+      opacity: 0;
+      transition: 700ms ease-out;
+      @media screen and (max-width: $mobile) {
+        font-size: 3.4vw;
+        margin-top: 5vw;
+        padding: 2vw;
+        border-radius: 2vw;
+      }
+    }
+    &__buttons-group {
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+    }
+  }
+}
+
+.project-new_item:hover .link-to-github, 
+.project-new_item:hover .link-to-deploy
+{
+  opacity: 1;
+  transform: translateY(-4vw);
+}
+
+.project-new_item:hover .project-new_item__list-group {
+  opacity: 1;
+  transform: translateY(2.5vw);
+}
+
+.link-to-github, .link-to-deploy {
+  border-radius: 0.8vw;
+  margin-bottom: 0;
+
+  opacity: 0;
+  transition: 600ms ease-in;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vw;
+  color: #ffffff;
+  padding: 0.7vw 2vw;
+  background: -moz-linear-gradient(
+    top,
+    #42aaff 0%,
+    #003366);
+  background: -webkit-gradient(
+    linear, left top, left bottom,
+    from(#42aaff),
+    to(#003366));
+  border: 1px solid #003366;
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.5);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.7),
+    0px 1px 0px rgba(255,255,255,0.3);
+  text-decoration: none;
+  @media screen and (max-width: $mobile) {
+    border-radius: 2vw;
+    font-size: 3vw;
+    padding: 2vw 5vw;
+  }
+}
+
+.link-to-github:active, .link-to-deploy:active {
+  background: -moz-linear-gradient(
+      top,
+      #003366 0%,
+      #42aaff);
+    background: -webkit-gradient(
+      linear, left top, left bottom,
+      from(#003366),
+      to(#42aaff));
+
+}
+
+.link-to-github:hover,.link-to-deploy:hover {
+  background: -moz-linear-gradient(
+      top,
+      #42aaff 0%,
+      #0d5aa7);
+    background: -webkit-gradient(
+      linear, left top, left bottom,
+      from(#42aaff),
+      to(#0d5aa7));
+}
+
+.repair-design-project {
+  background: url("./src/assets/images/repair-design.jpg") no-repeat center top / cover;
+}
+
+.fancy-weather {
+  background: url("./src/assets/images/fancy-weather.jpg") no-repeat center top / cover;
+}
+
+.simple-piskel-clone {
+  background: url("./src/assets/images/simple-piskel-clone.jpg") no-repeat left top / cover;
+}
+
+.todo {
+  background: url("./src/assets/images/todo.jpg") no-repeat center top / cover;
+}
+
+.culture-portal {
+  background: url("./src/assets/images/culture-portal.jpg") no-repeat center top / cover;
+}
+
+.songbird {
+  background: url("./src/assets/images/songbird.jpg") no-repeat center top / cover;
+}
+
+.repair-design-project::before {
+  content: 'Repair-design-project';
+}
+
+.fancy-weather::before {
+  content: 'Fancy-weather';
+}
+
+.simple-piskel-clone::before {
+  content: 'Simple-piskel-clone';
+}
+
+.todo::before {
+  content: 'Todo-list';
+}
+
+.culture-portal::before {
+  content: 'Culture-portal';
+}
+
+.songbird::before {
+  content: 'Songbird';
+}
